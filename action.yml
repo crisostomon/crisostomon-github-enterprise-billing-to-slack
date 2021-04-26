@@ -1,0 +1,16 @@
+name: 'GitHub Enterprise Billing to Slack'
+description: 'Sends a slack message containing usage and licencing data from the selected GitHub Enterprise'
+author: 'Nuno Crisostomo <nuno.crisostomo@paddypowerbetfair.com>'
+inputs:
+  enterprise_admin_token:
+    description: 'GitHub Enterprise admin token'
+    required: true
+  enterprise:
+    description: 'Name of the Organization'
+    required: true
+  slack_webhook_url:
+    description: 'Slack Webhook URL'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
